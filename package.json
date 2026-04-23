@@ -1,0 +1,12 @@
+{
+  "name": "talrum-danmark",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Statisk open source StatBank explorer til GitHub Pages.",
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 4173",
+    "check": "node --check src/app.js && node --check src/statbank.js && node --check src/jsonstat.js && node --check src/charts.js && node --check src/map.js"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Et åbent, visuelt og nemt dashboard til Danmarks Statistiks StatBank API."
+    />
+    <title>Talrum Danmark | Åben visning af DST data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Spring til indhold</a>
+
+    <div class="site-shell">
+      <header class="topbar" data-glass>
+        <a class="brand" href="#/">
+          <span class="brand-mark" aria-hidden="true">T</span>
+          <span>
+            <strong>Talrum</strong>
+            <small>Danmarks data gjort læseligt</small>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          Menu
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primær navigation">
+          <a href="#/" data-route-link="/">Overblik</a>
+          <a href="#/udforsk" data-route-link="/udforsk">Udforsk</a>
+          <a href="#/byg" data-route-link="/byg">Byg visning</a>
+          <a href="#/api" data-route-link="/api">API & kilder</a>
+        </nav>
+      </header>
+
+      <main id="main" tabindex="-1"></main>
+
+      <footer class="site-footer">
+        <div>
+          <strong>Talrum Danmark</strong>
+          <p>
+            Åben prototype bygget oven på Danmarks Statistiks StatBank API. Data
+            tilhører og opdateres af Danmarks Statistik.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.dst.dk/da/Statistik/hjaelp-til-statistikbanken/api" target="_blank" rel="noreferrer">
+            DST API
+          </a>
+          <a href="https://api.statbank.dk/console#data" target="_blank" rel="noreferrer">
+            StatBank console
+          </a>
+          <a href="https://www.statbank.dk/" target="_blank" rel="noreferrer">
+            Statistikbanken
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+    <template id="loading-template">
+      <div class="loading-card">
+        <span class="loader"></span>
+        <span>Henter friske tal...</span>
+      </div>
+    </template>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
